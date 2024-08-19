@@ -1,0 +1,25 @@
+---
+interface Props {
+    category?: string;
+    brand?: string;
+    model?: string;
+}
+
+const {category, brand, model} = Astro.props;
+---
+
+<a 
+    href="#"
+    class="
+    bg-slate-800 w-32 h-32 rounded-sm p-1 flex flex-col text-gray-600 hover:text-white relative
+    after:absolute after:content-[''] after:inset-[2px] after:bg-black after:rounded-md
+    "
+>
+    <div class="flex flex-col max-w-max">
+        <p class="text-sm text-gray-600 hover:text-white z-10">Motosierra</p>
+        <p class="text-base text-gray-600 hover:text-white z-10">Oleo Mac</p>
+    </div>
+    <div class="flex justify-center items-center w-full h-full">
+        <h3 class="text-center text-2xl z-10">GSH-40</h3>
+    </div>
+</a>

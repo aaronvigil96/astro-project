@@ -1,0 +1,19 @@
+---
+import CardNav from "../CardNav.astro"
+
+
+const links = [
+    {href: '/', icon:'home'},
+    {href:'/products', icon:'product'},
+    {href:'/vehicles', icon:'truck'},
+    {href:'/clients', icon:'client'}
+]
+---
+
+<nav>
+    <div class="flex justify-center gap-3 py-2 flex-wrap">
+        {
+            links.map(({href, icon}) => (<CardNav href={href} icon={icon}/>))
+        }
+    </div>
+</nav>

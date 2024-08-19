@@ -1,0 +1,22 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+    icon: string;
+    href: string;
+}
+
+const {icon, href} = Astro.props;
+---
+<a href={href} class="
+    grid justify-center items-center relative w-[120px] h-[80px] cursor-pointer overflow-hidden bg-slate-800 rounded-md
+
+    hover:before:content-[''] hover:before:absolute hover:before:w-[30%] hover:before:h-[300%] hover:before:bg-yellow-300 hover:before:rotate-[45deg] hover:before:left-10 hover:before:animate-animate-line
+
+    after:absolute after:content-[''] after:inset-[2px] after:bg-black after:rounded-md
+    ">
+        <Icon name={icon} size={40} class="text-white z-10"/>
+</a>
+
+<style>
+</style>
