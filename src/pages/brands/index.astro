@@ -1,0 +1,21 @@
+---
+import CardItem from "../../components/CardItem.astro";
+import Title from "../../components/shared/Title.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const resp = await fetch('http://localhost:3000/brands');
+const data = await resp.json();
+
+
+---
+
+<MainLayout title="marcas">
+    <Title>
+        Marcas
+    </Title>
+    <div class="mt-2 flex gap-2 flex-wrap">
+        {
+            data.map((item:any) => (<CardItem brand={item.name} model={item.name}>${item.name}</CardItem>))
+        }
+    </div>
+</MainLayout>
